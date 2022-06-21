@@ -6,7 +6,7 @@ import java.util.Objects;
 public abstract class Shape {
     private String color;
 
-    public abstract double Area ();
+    public abstract double area ();
     public abstract double getMethods();
     public Shape() {
     }

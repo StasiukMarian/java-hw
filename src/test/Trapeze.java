@@ -8,14 +8,18 @@ public class Trapeze extends Shape{
     private double height;
 
     @Override
-    public double Area() {
+    public double area() {
         return ((this.sideA+this.sideB)/2)*this.height ;
     }
 
     @Override
     public double getMethods() {
-        System.out.println("Figure : " + this.figure + " ,your area is " + this.Area() + ", color : " + getColor());
-        return  this.Area();
+        if (this.sideA <= this.sideB ){
+            System.out.println("You can't draw this figure");
+        }else{
+            System.out.println("Figure : " + this.figure + " ,your area is " + this.area() + ", color : " + getColor());
+        }
+        return  this.area();
     }
 
     public Trapeze() {
@@ -62,6 +66,7 @@ public class Trapeze extends Shape{
     }
 
     public double getHeight() {
+        System.out.println("Your height is : " + this.height);
         return height;
     }
 

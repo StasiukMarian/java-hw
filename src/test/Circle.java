@@ -8,14 +8,14 @@ public class Circle extends Shape {
 
     @Override
     public double getMethods() {
-        System.out.println("Figure : " + this.figure + " ,your area is " + this.Area() + ", color : " + getColor());
-        return  this.Area();
+        System.out.println("Figure : " + this.figure + " ,your area is " + this.area() + ", color : " + getColor());
+        return  this.area();
     }
 
 
 
     @Override
-    public double Area() {
+    public double area() {
         return this.Pi*Math.pow(this.radius, 2) ;
     }
 
@@ -36,7 +36,8 @@ public class Circle extends Shape {
     }
 
     public int getRadius() {
-        return radius;
+        System.out.println("Your radius is : " + this.radius);
+        return this.radius;
     }
 
     public void setRadius(int radius) {

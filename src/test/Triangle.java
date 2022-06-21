@@ -1,37 +1,42 @@
 package test;
 
 
-
 public class Triangle extends Shape {
     private String figure;
-    public int kathetos;
+    public double kathetos;
 
     @Override
-    public double Area() {
+    public double area() {
         return 0;
     }
-    public int Hypotenuse(){
-    return (int) (Math.pow(this.kathetos, 2) + Math.pow(this.kathetos,2));
+
+    public double hypotenuse() {
+            return (Math.pow(this.kathetos, 2) + Math.pow(this.kathetos, 2));
     }
+
     @Override
     public double getMethods() {
-        System.out.println("Figure : " + this.figure + " ,your hypotenuse is " + this.Hypotenuse() + ", color : " + getColor());
+        if (this.hypotenuse() < 2) {
+            System.out.println("You can't draw this figure");
+        } else {
+            System.out.println("Figure : " + this.figure + " ,your hypotenuse is " + this.hypotenuse() + ", color : " + getColor());
 
-        return  this.Area();
+        }
+        return this.area();
     }
 
-    public Triangle(String figure, int kathetos) {
+    public Triangle(String figure, double kathetos) {
         this.figure = figure;
         this.kathetos = kathetos;
     }
 
-    public Triangle(String color, String figure, int kathetos) {
+    public Triangle(String color, String figure, double kathetos) {
         super(color);
         this.figure = figure;
         this.kathetos = kathetos;
     }
 
-    public int getKathetos() {
+    public double getKathetos() {
         return kathetos;
     }
 

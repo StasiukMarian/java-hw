@@ -12,14 +12,14 @@ public class Square extends Shape {
 
 
     @Override
-    public double Area() {
+    public double area() {
         return Math.pow(this.side,2);
     }
 
     @Override
     public double getMethods() {
-        System.out.println("Figure : " + this.figure + " ,your area is " + this.Area() + ", color : " + getColor());
-        return  this.Area();
+        System.out.println("Figure : " + this.figure + " ,your area is " + this.area() + ", color : " + getColor());
+        return  this.area();
     }
 
     public Square(String figure, double side) {
@@ -34,6 +34,7 @@ public class Square extends Shape {
     }
 
     public double getSide() {
+        System.out.println("Your side is : " + this.side);
         return side;
     }
 
